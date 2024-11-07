@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 from io import StringIO
 import altair as alt
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
+# from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 # URLs de descarga directa desde OSF
 urls = {
@@ -318,7 +318,7 @@ elif tabla_seleccionada == "Medidas":
         
         # Filtrar los datos por id_paciente
         medidas_filtradas = st.session_state.medidas[st.session_state.medidas["id_paciente"] == id_paciente]
-        
+        """
         if medidas_filtradas.empty:
             st.write("No se encontraron medidas para el ID de paciente especificado.")
         else:
@@ -339,6 +339,7 @@ elif tabla_seleccionada == "Medidas":
             # Gráfico de la predicción
             st.write("**Predicción del Estado Emocional para los próximos 30 días**")
             st.line_chart(prediccion)
+        """
 
 
 elif tabla_seleccionada == "Pacientes_Enfermeras":
